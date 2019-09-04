@@ -1,5 +1,116 @@
+<!DOCTYPE html>
 <html>
-<body>
-Hello
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+
+    </head>
+    <body>
+        <div>Estimated Weekly Budget - <input type="text" id="estBudget"/></div>
+        <div>Estimated Annual Budget - <input type="text" id="estYearBudget"/></div>
+
+
+        <table>
+            <thead style="font-size:10px;color:#2e6e9e;">
+                <tr>
+                    <th style="padding:10px;">
+                        Paid Support
+                    </th>
+                    <th style="padding:10px;">
+                        Important Information
+                    </th>
+                    <th style="padding:10px;">
+                        When?
+                    </th>
+                    <th style="padding:10px;">
+                        Type of Support
+                    </th>
+                    <th style="padding:10px;">
+                        Unit
+                    </th>
+                    <th style="padding:10px;">
+                        Mon
+                    </th>
+                    <th style="padding:10px;">
+                        Tue
+                    </th>
+                    <th style="padding:10px;">
+                        Wed
+                    </th>
+                    <th style="padding:10px;">
+                        Thur
+                    </th>
+                    <th style="padding:10px;">
+                        Fri
+                    </th>
+                    <th style="padding:10px;">
+                        Sat
+                    </th>
+                    <th style="padding:10px;">
+                        Sun
+                    </th>
+                    <th style="padding:10px;">Total Units</th>
+                    <th style="padding:10px;">Est Weekly Cost</th>
+                    <th style="padding:10px;">Est Annual Cost</th>
+                 </thead>  
+          <tbody id="rasBody">
+            </tbody>
+
+        </table>
+
+        <br /><br /><br />
+                    <table>
+                        <tr><td>Paid Support</td><td><input type="text" /></td></tr>
+                        <tr><td>Important Information</td><td><input type="text" /></td></tr>
+                        <tr><td>When?</td><td>
+                                              <select id="when">
+                                                  <option>Daily</option>
+                                                  <option>Weekly</option>
+                                                  <option>Every 2 Weeks</option>
+                                                  <option>Every 4 weeks</option>
+                                                  <option>Monthly</option>
+                                                  <option>Annually</option>
+                                                  <option>One off</option>
+                                              </select></td></tr>
+                        <tr><td>People I need</td><td><select>
+                                                          <option>Single Staff</option>
+                                                          <option>Double Staff</option>
+                                                          <option>other</option>
+</select></td></tr>
+                        <tr><td>Type of Support</td><td><select id="type">
+                            <option></option>
+    <option>Support 1</option>
+    <option>Support 2</option>
+    <option>Support 3</option>
+</select></td></tr>
+                        <tr><td>Unit</td><td>
+                            <select id="unit">
+                                <option></option>
+                                <option>Minute</option>
+                                <option>Hour</option>
+                                <option>Day</option>
+                                <option>Night</option>
+                                <option>Sessions</option>
+                                <option>Week</option>
+                                <option>Placement</option>
+                                <option>Journey</option>
+                            </select>
+                        </td></tr>
+                        <tr><td>Mon</td><td><input type="text" value="0" id="mon"/></td></tr>
+                        <tr><td>Tue</td><td><input type="text" value="0" id="tue"/></td></tr>
+                        <tr><td>Wed</td><td><input type="text"  value="0"id="wed"/></td></tr>
+                        <tr><td>Thu</td><td><input type="text" value="0" id="thur"/></td></tr>
+                        <tr><td>Fri</td><td><input type="text" value="0" id="fri"/></td></tr>
+                        <tr><td>Sat</td><td><input type="text" value="0" id="sat"/></td></tr>
+                        <tr><td>Sun</td><td><input type="text" value="0" id="sun"/></td></tr>
+                        <tr><td>Total Units</td><td><input type="text" /></td></tr>
+                        <tr><td>Est Weekly Cost</td><td><input type="text" /></td></tr>
+                        <tr><td>Est Annual Cost</td><td><input type="text" /></td></tr>
+                    </table>
+        <br />
+        <button onclick="addRow()">Add</button>
+        <script src="RAS.js">
+
+        </script>
+    </body>
 </html>
