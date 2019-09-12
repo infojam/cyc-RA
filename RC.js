@@ -51,17 +51,15 @@ function getRates(supportType, unit) {
             return rates[i];
         }
     }
-    //TODO Error here
     //alert('Not Found');
 }
-
 function addToSupport(supportType, unit, sumOfUnits, when)
 {
     var rate = getRates(supportType, unit);
     rate.sumOfUnits = sumOfUnits;
     rate.when = when;
     Support.push (rate);
-    console.log(Support);
+    //console.log(Support);
     CalculateEstimatedCost();
 }
 
@@ -79,32 +77,14 @@ function createTableArray()
     }
 }
 
-function getFrequency(type)
-{
-    var i;
-    for (i = 0; i < Frequency.length; i++) {
-        if (Frequency[i].type === type) {
-            return Frequency[i];
-        }
-    }
-}
 
-function CalculateEstimatedCost()
-{
-    var total = 0;
-    var annualTotal = 0;
-    var i;
-    for (i = 0; i < Support.length; i++) {
-        total +=  (Support[i].cost * Support[i].sumOfUnits);
-        annualTotal += ((Support[i].cost * Support[i].sumOfUnits) * getFrequency(Support[i].when).AnnualMultiplier);
-    }
-
-    //Set Weekly budget
-    estBudget = total;
-    //Set Annual Budget
-    estAnnualBudget= annualTotal;
-}
 
 createTableArray();
-CalculateEstimatedCost();
-form.setAnswerText("TO", "Est Budget=" + estBudget + "\n" + "Est Annual= " + estAnnualBudget);
+
+var output = "";
+for (var index = 0; index < support.length; index++) {
+    output += support[index].cost;
+    
+}
+
+form.setAnswerText("TO", output);
